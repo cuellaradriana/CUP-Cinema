@@ -1,0 +1,788 @@
+@charset "UTF-8";
+/* Fuentes y otros import */
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Bungee+Shade&family=Madimi+One&family=Mukta+Vaani:wght@200;300;400&display=swap");
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+blockquote,
+figure,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+pre,
+code {
+  font-family: monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Variables y mixins */
+/* Paleta de Colores */
+/* Fuentes */
+/* Módulos */
+body {
+  width: 100%;
+  background-image: url("../assets/images/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: "Mukta Vaani", sans-serif;
+}
+
+.swal2-popup .swal2-title,
+.swal2-popup .swal2-content {
+  font-family: "Madimi One", sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.swal2-popup {
+  background-color: #969d41;
+  color: white;
+  font-family: "Mukta Vaani", sans-serif;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 20px;
+  width: 25em;
+}
+
+header {
+  width: 100%;
+}
+header #headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #headerContainer #logoContainer {
+  width: 15%;
+  display: flex;
+}
+header #headerContainer #logoContainer img {
+  width: 90%;
+  margin: 0 auto;
+}
+header #headerContainer nav {
+  width: 55%;
+}
+header #headerContainer nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #headerContainer nav ul li {
+  font-size: 1.1rem;
+  padding: 10px;
+}
+header #headerContainer nav ul li a {
+  padding: 5px;
+  transition: 1s;
+}
+header #headerContainer nav ul li .focusNav,
+header #headerContainer nav ul li a:hover {
+  color: #d3d94f;
+  font-size: 1.5rem;
+  font-family: "Madimi One", sans-serif;
+  text-shadow: 1px 1px 1px rgba(211, 217, 79, 0.5);
+}
+header #headerContainer nav ul li .focusNav {
+  background-color: rgba(86, 93, 57, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+header #headerContainer nav ul li #firstFocusNav {
+  background-color: none;
+}
+header #headerContainer nav ul li #lastFocusNav {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 1px #000;
+  font-family: "Madimi One", sans-serif;
+  color: #d3d94f;
+  background-color: rgba(23, 32, 55, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+}
+header #headerContainer h1 {
+  width: 20%;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Bungee Shade", sans-serif;
+  text-shadow: 2px 2px 4px rgb(23, 32, 55);
+}
+
+@media only screen and (max-width: 1250px) {
+  header #headerContainer nav ul li a {
+    padding: 0;
+  }
+  header #headerContainer nav ul li .focusNav,
+  header #headerContainer nav ul li a:hover {
+    font-size: 1.1rem;
+  }
+  header #headerContainer nav ul li .focusNav {
+    padding: 5px;
+  }
+  header #headerContainer nav ul li #lastFocusNav {
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+  header #headerContainer h1 {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  header {
+    width: 100%;
+  }
+  header #headerContainer #logoContainer {
+    width: 13%;
+    display: flex;
+  }
+  header #headerContainer #logoContainer img {
+    width: 90%;
+    margin: 0 auto;
+  }
+  header #headerContainer nav {
+    width: 57%;
+  }
+  header #headerContainer nav ul li {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  header #headerContainer nav ul li .focusNav,
+  header #headerContainer nav ul li a:hover {
+    font-size: 1rem;
+  }
+  header #headerContainer nav ul li .focusNav {
+    border-radius: 7px;
+  }
+  header #headerContainer nav ul li #lastFocusNav {
+    font-size: 1rem;
+  }
+  header #headerContainer nav h1 {
+    width: 18%;
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 920px) {
+  header {
+    padding-top: 1.5rem;
+  }
+  header #headerContainer {
+    justify-content: space-around;
+  }
+  header #headerContainer #logoContainer {
+    display: none;
+  }
+  header #headerContainer nav {
+    width: 60%;
+  }
+  header #headerContainer h1 {
+    width: 25%;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 860px) {
+  header {
+    padding-top: 1.5rem;
+  }
+  header #headerContainer {
+    justify-content: space-around;
+  }
+  header #headerContainer #logoContainer {
+    display: none;
+  }
+  header #headerContainer nav {
+    width: 70%;
+  }
+  header #headerContainer h1 {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  header #headerContainer nav {
+    width: 75%;
+  }
+  header #headerContainer h1 {
+    width: 18%;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  header #headerContainer {
+    flex-direction: column-reverse;
+  }
+  header #headerContainer #logoContainer {
+    display: none;
+  }
+  header #headerContainer nav {
+    width: 80%;
+  }
+  header #headerContainer h1 {
+    width: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  header #headerContainer nav {
+    width: 90%;
+  }
+  header #headerContainer h1 {
+    width: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 580px) {
+  header #headerContainer nav {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  header #headerContainer nav ul li {
+    font-size: 0.8rem;
+  }
+  header #headerContainer nav ul li .focusNav,
+  header #headerContainer nav ul li a:hover {
+    font-size: 0.8rem;
+  }
+  header #headerContainer nav ul li #lastFocusNav {
+    font-size: 0.8rem;
+  }
+  header #headerContainer h1 {
+    width: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+.titlePage {
+  width: 100%;
+  font-family: "Madimi One", sans-serif;
+  font-size: 3rem;
+  color: #d3d94f;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1210px) {
+  .titlePage {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (max-width: 1110px) {
+  .titlePage {
+    font-size: 2.6rem;
+  }
+}
+@media only screen and (max-width: 1010px) {
+  .titlePage {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (max-width: 910px) {
+  .titlePage {
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (max-width: 810px) {
+  .titlePage {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 710px) {
+  .titlePage {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 610px) {
+  .titlePage {
+    font-size: 1.6rem;
+  }
+}
+#mainIndex {
+  width: 100%;
+}
+#mainIndex section {
+  width: 100%;
+  padding: 5%;
+}
+#mainIndex section #containerMoviesCards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#mainIndex section #containerMoviesCards .movieCard {
+  width: 30%;
+  height: 70vh;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
+  background-color: none;
+}
+#mainIndex section #containerMoviesCards .movieCard .imgCard {
+  height: 100%;
+  border-radius: 10px;
+}
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: left 0.3s ease;
+}
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer .titleCard,
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer .directorCard,
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer .durationCard,
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer .rateCard,
+#mainIndex section #containerMoviesCards .movieCard .textCardContainer h4 {
+  display: none;
+}
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer {
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  margin-right: 1.5%;
+  background-color: rgba(23, 32, 55, 0.9);
+  text-shadow: 1px 1px 3px #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  left: 10%;
+}
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer .titleCard {
+  display: block;
+  font-family: "Madimi One", sans-serif;
+  font-size: 2rem;
+  color: #d3d94f;
+}
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer .directorCard,
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer .durationCard {
+  display: block;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 1px #000;
+}
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer .rateCard {
+  display: block;
+  padding: 10px;
+  background-color: #d3d94f;
+  color: #565d39;
+  text-shadow: 1px 1px 1px #fff;
+  font-size: 1.5rem;
+  font-family: "Madimi One", sans-serif;
+  border-radius: 10px;
+  margin-top: 2%;
+}
+#mainIndex section #containerMoviesCards .movieCard:hover .textCardContainer h4 {
+  display: block;
+  font-family: "Bungee Shade", sans-serif;
+  padding-top: 50%;
+}
+
+@media only screen and (max-width: 1210px) {
+  #mainIndex section #containerMoviesCards .movieCard {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 1210px) {
+  #mainIndex section #containerMoviesCards .movieCard {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #mainIndex section #containerMoviesCards .movieCard {
+    width: 80%;
+  }
+}
+#movieFormContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#movieFormContainer span {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+}
+#movieFormContainer form {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(86, 93, 57, 0.5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#movieFormContainer form #formContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#movieFormContainer form #formContainer label {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 1px #000;
+  color: #d3d94f;
+}
+#movieFormContainer form #formContainer #title,
+#movieFormContainer form #formContainer #year,
+#movieFormContainer form #formContainer #director,
+#movieFormContainer form #formContainer #duration,
+#movieFormContainer form #formContainer #rate,
+#movieFormContainer form #formContainer #poster {
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  color: rgb(23, 32, 55);
+}
+#movieFormContainer form #formContainer #title,
+#movieFormContainer form #formContainer #poster {
+  width: 80%;
+}
+#movieFormContainer form #formContainer #year,
+#movieFormContainer form #formContainer #rate {
+  width: 20%;
+}
+#movieFormContainer form #formContainer #director,
+#movieFormContainer form #formContainer #duration {
+  width: 60%;
+}
+#movieFormContainer form #formContainer #formLeft,
+#movieFormContainer form #formContainer #formRight {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+#movieFormContainer form #formContainer #formRight #checkboxContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup div {
+  display: flex;
+  width: 50%;
+}
+#movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup label span {
+  font-size: 1rem;
+  text-shadow: none;
+  color: #fff;
+}
+#movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup input:checked + label span {
+  color: #d3d94f;
+  text-shadow: 2px 2px 2px #000;
+}
+#movieFormContainer form #buttonContainer {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#movieFormContainer form #buttonContainer #submit,
+#movieFormContainer form #buttonContainer #reset {
+  padding: 5px 10px;
+  background-color: inherit;
+  border: 1px solid #d3d94f;
+  color: #d3d94f;
+  border-radius: 10px;
+}
+#movieFormContainer form #buttonContainer #reset:hover {
+  border: 1px solid rgb(23, 32, 55);
+  background-color: rgb(23, 32, 55);
+  color: #fff;
+  box-shadow: 1px 1px 3px #000;
+}
+
+@media only screen and (max-width: 1210px) {
+  #movieFormContainer span {
+    font-size: 1.3rem;
+  }
+  #movieFormContainer form {
+    width: 80%;
+  }
+  #movieFormContainer #buttonContainer {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #movieFormContainer span {
+    font-size: 1.1rem;
+  }
+  #movieFormContainer form {
+    width: 100%;
+  }
+  #movieFormContainer form #formContainer #year,
+  #movieFormContainer form #formContainer #rate {
+    width: 30%;
+  }
+  #movieFormContainer form #formContainer #formRight {
+    margin-left: 0;
+  }
+  #movieFormContainer form #formContainer #formRight #checkboxContainer .checkGroup {
+    width: 90%;
+  }
+  #movieFormContainer form #buttonContainer {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 780px) {
+  #movieFormContainer span {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  #movieFormContainer form {
+    width: 100%;
+  }
+  #movieFormContainer form #formContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  #movieFormContainer form #formContainer #year,
+  #movieFormContainer form #formContainer #rate {
+    width: 30%;
+  }
+  #movieFormContainer form #formContainer #formRight,
+  #movieFormContainer form #formContainer #formLeft {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  #movieFormContainer form #buttonContainer {
+    width: 90%;
+  }
+}
+#containerAboutMyProject {
+  margin: 1rem 3rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background-color: rgba(86, 93, 57, 0.5);
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 1px #000;
+}
+#containerAboutMyProject p {
+  margin-bottom: 1rem;
+}
+
+main {
+  width: 100%;
+  height: 75%;
+}
+main section {
+  width: 100%;
+  height: 100%;
+}
+main section #mainContact {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main section #mainContact #formContainer {
+  width: 100%;
+}
+main section #mainContact #formContainer #sendForm,
+main section #mainContact #formContainer #deleteForm {
+  border: 1px solid #d3d94f;
+  color: #d3d94f;
+}
+main section #mainContact #formContainer #sendForm:hover,
+main section #mainContact #formContainer #deleteForm:hover {
+  border: 1px solid rgb(23, 32, 55);
+  background-color: rgb(23, 32, 55);
+  color: #fff;
+}
+main section #mainContact:hover {
+  background-color: rgba(150, 157, 65, 0.3);
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  main section #mainContact {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main section #mainContact {
+    width: 80%;
+  }
+}
+footer {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer #formAndSMContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+footer #formAndSMContainer #socialMediaContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer #formAndSMContainer #socialMediaContainer a {
+  margin: 0.5rem;
+}
+footer #formAndSMContainer #socialMediaContainer a i {
+  color: #d3d94f;
+}
+footer #formAndSMContainer #newsletterContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer #formAndSMContainer #newsletterContainer h4 {
+  font-family: "Madimi One", sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 0.5rem;
+}
+footer #formAndSMContainer #newsletterContainer #formContainerFooter {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer #formAndSMContainer #newsletterContainer #formContainerFooter #emailFormFooter,
+footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
+  width: 60%;
+  font-family: inherit;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #d3d94f;
+  color: rgb(23, 32, 55);
+  border: 1px solid rgb(23, 32, 55);
+}
+footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
+  width: 20%;
+  background-color: rgb(23, 32, 55);
+  border: 1px solid #d3d94f;
+  color: #d3d94f;
+}
+
+@media only screen and (max-width: 1100px) {
+  footer #formAndSMContainer #socialMediaContainer {
+    width: 40%;
+  }
+  footer #formAndSMContainer #newsletterContainer {
+    width: 60%;
+  }
+  footer #formAndSMContainer #newsletterContainer h4 {
+    font-size: 0.8rem;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter {
+    width: 80%;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #emailFormFooter,
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
+    width: 60%;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  footer #formAndSMContainer #socialMediaContainer {
+    width: 30%;
+  }
+  footer #formAndSMContainer #newsletterContainer {
+    width: 70%;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter {
+    width: 90%;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #emailFormFooter,
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
+    width: 70%;
+  }
+  footer #formAndSMContainer #newsletterContainer #formContainerFooter #submitFormFooter {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  footer #formAndSMContainer {
+    flex-direction: column;
+  }
+  footer #formAndSMContainer #socialMediaContainer {
+    width: 100%;
+  }
+  footer #formAndSMContainer #socialMediaContainer #newsletterContainer {
+    width: 100%;
+  }
+}/*# sourceMappingURL=styles.css.map */
